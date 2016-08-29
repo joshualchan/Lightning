@@ -6,21 +6,13 @@ void setup()
 
 void draw()
 {
-
-}
-void mousePressed()
-{
-
+	person();
 }
 
 void person()
 {
 	fill(255,255,0);
-	ellipse(100)
+	ellipse(100,200,10,10);
 }
 
-void lightning()
-{
-	line(x1,y1,x2,y2);
 
-}
