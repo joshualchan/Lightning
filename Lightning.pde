@@ -1,8 +1,7 @@
-int x = (int)(Math.random()*200)+150;
-int y = 20;
-int randomSpread = x + (int)(Math.random()*50)-25;
-int randomDrop = y+(int)(Math.random()*50);
-
+int x = 250;
+int y = 0;
+int randomSpread =(int)(Math.random()*20)-10;
+int randomDrop = (int)(Math.random()*50);
 
 
 
@@ -29,10 +28,10 @@ void lightning()
 
 	while(y<450)
 	{
-		line(x, y, randomSpread, randomDrop);
-
+		line(x, y,x+(int)(Math.random()*50)-25, y+(int)(Math.random()*20));
+		x = x + randomSpread;
 		y = y + randomDrop;
-		
+
 		
 	}	
 
