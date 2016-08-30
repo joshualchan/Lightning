@@ -1,18 +1,46 @@
+int x = (int)(Math.random()*300)-150;
+int y = 20;
+int randomSpread = (int)(Math.random()*50)-25;
+int randomDrop = (int)(Math.random()*50);
+
+
+
+
 void setup()
 {
-  size(300,300);
+  size(500,500);
+  noLoop();
 }
 
 
 void draw()
 {
-	person();
+	lightning();
+	
 }
 
-void person()
+
+void lightning()
 {
-	fill(255,255,0);
-	ellipse(100,200,10,10);
+
+
+	while(y<450)
+	{
+		point(x, y);
+		x = x + randomSpread;
+		y = y + randomDrop;
+		
+	}	
+
+
 }
+void mousePressed()
+{
+	redraw();
+}
+
+
+
+
 
 
