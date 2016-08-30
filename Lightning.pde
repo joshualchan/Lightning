@@ -1,9 +1,7 @@
-int x = (int)(Math.random()*300)-150;
+int x = (int)(Math.random()*200)+150;
 int y = 20;
-int randomSpread = (int)(Math.random()*50)-25;
-int randomDrop = (int)(Math.random()*50);
-int randomSpread2 = x + randomSpread;
-int randomDrop2 = y + randomDrop;
+int randomSpread = x + (int)(Math.random()*50)-25;
+int randomDrop = y+(int)(Math.random()*50);
 
 
 
@@ -19,7 +17,7 @@ void draw()
 {
 	
 	
-	background(0,0,0);
+
 	lightning();
 	
 	
@@ -27,13 +25,12 @@ void draw()
 
 void lightning()
 {
-	stroke(255,255,255);
 
 
 	while(y<450)
 	{
-		line(x, y, randomSpread2, randomDrop2);
-		x = x + randomSpread;
+		line(x, y, randomSpread, randomDrop);
+
 		y = y + randomDrop;
 		
 		
