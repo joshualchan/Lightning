@@ -1,41 +1,43 @@
-int x = 250;
+int x = (int)(Math.random()*200)+150;
 int y = 0;
-int randomSpread =(int)(Math.random()*20)-10;
-int randomDrop = (int)(Math.random()*50);
 
 
 
 void setup()
 {
-  size(500,500);
+
+ 	size(500,500);
+ 	noLoop();
+ 	frameRate(30);
+ 	strokeWeight(5);
 
 }
 
 
 void draw()
 {
+	background(0);
+		while(y<450)
+		{
+		stroke((int)(Math.random()*256));
+		int a  = (int)(Math.random()*50)-25;
+		int b = (int)(Math.random()*20);	
+		line(x, y,x+a, y+b);
+			
+		x= x+a +0;
+		y=y + b +0;
+		}
 	
 	
 
-	lightning();
-	
 	
 }
 
-void lightning()
+void mousePressed()
 {
-
-
-	while(y<450)
-	{
-		line(x, y,x+(int)(Math.random()*50)-25, y+(int)(Math.random()*20));
-		x = x + randomSpread;
-		y = y + randomDrop;
-
-		
-	}	
-
-
+	redraw();
+	y = y-450;
+	x =  (int)(Math.random()*200)+150;
 }
 
 
